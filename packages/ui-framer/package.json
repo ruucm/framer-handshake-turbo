@@ -1,0 +1,56 @@
+{
+  "name": "ui-framer",
+  "version": "0.0.0",
+  "files": [
+    "dist/"
+  ],
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": {
+      "import": "./dist/*/index.js",
+      "types": "./dist/*/index.d.ts"
+    },
+    "./tailwind.css": "./tailwind.css"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*/index.d.ts",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode=development --watch",
+    "build": "webpack --mode=production",
+    "module:upgrade": "node module-upgrade.js",
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "babel-loader": "^8.2.2",
+    "babelconfig": "workspace:*",
+    "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^7.6.0",
+    "css-loader": "^5.0.1",
+    "esbuild": "^0.15.5",
+    "lodash.merge": "^4.6.2",
+    "readline-sync": "^1.4.10",
+    "terser-webpack-plugin": "^5.3.6",
+    "ts-loader": "8.4.0",
+    "typescript": "4.9.3",
+    "webpack": "git+https://github.com/ruucm/webpack.git#custom-build-http-0.1.6",
+    "webpack-cli": "^4.4.0"
+  },
+  "peerDependencies": {
+    "framer": "^2.4.1",
+    "framer-motion": "^10.16.4",
+    "popmotion": "^11.0.5",
+    "react": "^18.2.0"
+  }
+}

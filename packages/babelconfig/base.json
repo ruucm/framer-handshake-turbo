@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "useBuiltIns": "entry",
+        "corejs": {
+          "version": "3",
+          "proposals": true
+        },
+        "modules": "auto",
+        "targets": {
+          "ie": "8"
+        }
+      }
+    ],
+    "@babel/react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": ["@babel/plugin-transform-regenerator", ["@babel/plugin-transform-spread"], "angularjs-annotate"]
+}
